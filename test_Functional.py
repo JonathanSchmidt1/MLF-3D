@@ -12,7 +12,7 @@ grid_size = 60
 filter_size = 10
 
 density = np.load(open("~/fusessh/H2_density.npy","rb"),allow_pickle=True).reshape(191,191,191) #center of molecule [96][96][99]
-density = density[96-size//2:96+size//2][:,96-size//2:96+size//2][:,,99-size//2:99+size//2]
+density = density[96-grid_size//2:96+grid_size//2][:,96-grid_size//2:96+grid_size//2][:,:,99-grid_size//2:99+grid_size//2]
 
 Rs_in = [(1, 0)]  # 1 scalar field
 Rs_out = [(1, 0)]  # 1 vector field
